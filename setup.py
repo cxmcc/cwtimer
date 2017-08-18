@@ -11,14 +11,18 @@ classifiers = [
     'Topic :: System :: Clustering',
 ]
 
+with open('README.rst', 'r') as f:
+    long_description = f.read()
+
 setup(
     name='cwtimer',
-    version='0.0.1',
-    description='',
+    version='0.0.2',
+    description='Pythonic timing tracker with reporting to Cloudwatch',
+    long_description=long_description,
     author='Xiuming Chen',
     author_email='cc@cxm.cc',
     url='https://github.com/cxmcc/cwtimer',
-    packages=['cwtimer'],
+    py_modules=['cwtimer'],
     install_requires=install_requires,
     keywords=['timer', 'Cloudwatch'],
     classifiers=classifiers,
